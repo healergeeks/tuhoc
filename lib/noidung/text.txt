@@ -1,0 +1,39 @@
+String name = "NguyenManhDung";
+var gender = "nam"; //kiểu tự động nhận kiểu giá trị theo giá trị
+dynamic
+    giatien; // kiểu giá trị không cần gán giá trị vì giá trị mặc định là null
+//gán giá trị cho nó kiểu gì nó cũng nhận
+final mon = "toan"; // kiểu mặc định không thay đổi giá trị được
+int tuoi = 22;
+String?
+    maso; //kiểu mặc định là null nhưng khi gán giá trị nó nhận kiểu gí trị của nó như vậy
+const age = "20"; //kiểu mặc định không thể thay đổi được
+List<int> ListNumber = [1, 2, 3];
+late int number; // khai báo kiểu dữ liệu có thể khai báo sau
+
+class Sinhvien {
+  String? name;
+  int? age;
+  String? id;
+  Sinhvien({this.name, this.age, this.id});
+
+  void In() {
+    print("${name}-${age}-${id}");
+  }
+}
+
+void main(List<String> args) {
+  Sinhvien tuan = new Sinhvien();
+  tuan.name = "Trần Quốc Tuân";
+  tuan.age = 21;
+  tuan.id = "212104124";
+  tuan.In();
+  final quang = Sinhvien(
+    age: 22,
+    name: "Nguyễn Quang Mạnh",
+    id: "2121051416",
+  );
+  quang.In();
+  // Sinhvien quang = new Sinhvien("Nguyễn Mạnh Quang", 22);
+  // quang.In();
+}
